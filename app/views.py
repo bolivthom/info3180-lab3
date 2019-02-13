@@ -35,7 +35,6 @@ def contact():
         if form.validate_on_submit() == False:
             return render_template('contact.html', form = form)
         else:
-            app.logger.info("message")
             msg = Message(request.form['subject'],
             sender=(request.form['name'],
             request.form['email']), 
